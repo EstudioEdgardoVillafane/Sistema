@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../services/users.service';
+import { Example } from '../example';
 
 @Component({
   selector: 'app-backend',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackendComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService : UsersService) { }
+  exampleObject : Example;
+  userList : any[];
 
   ngOnInit() {
+      this.userService.getUser()
+      .snapshotChanges()
+      .subscribe(item => {
+        this.userList = [];
+        item.forEach(element => {
+          let x = element.payload.toJSON();
+          x["$key"] = element.key;
+          this.userList.push(x);
+        });
+      })
+      console.log(this.userList);
+  }
+
+  handdleClick(){
+    console.log(this.exampleObject);
+    this.userService.insertUser(this.exampleObject);
   }
 
 }

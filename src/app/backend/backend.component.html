@@ -1,3 +1,10 @@
-<p>
-  backend works!
-</p>
+
+<input [(ngModel)]="exampleObject.name" placeholder="name" name="name">
+<input [(ngModel)]="exampleObject.password" placeholder="password" name="password">
+<button (click)="handdleClick()">
+  colgate de esta
+</button>
+
+<a *ngFor="let toto of userList">
+  {{toto.name}} | {{toto.password}}
+</a>

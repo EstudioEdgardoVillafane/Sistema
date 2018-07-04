@@ -43,20 +43,33 @@ import { MatAutocompleteModule,
   matFormFieldAnimations,
 } from '@angular/material';
 
+//FireBase Configuration
+
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+
 //  Componenets
 
 import { AppComponent } from './app.component';
 import { BackendComponent } from './backend/backend.component';
 
+//  Services
+
+import { UsersService } from './services/users.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackendComponent
+    BackendComponent,
   ],
   imports: [
   BrowserModule,
   FormsModule,
+  AngularFireDatabaseModule,
+  AngularFireModule.initializeApp(environment.firebase),
   BrowserAnimationsModule,
   MatAutocompleteModule,
   MatBadgeModule,
@@ -95,7 +108,7 @@ import { BackendComponent } from './backend/backend.component';
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
