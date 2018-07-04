@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
-import { Example } from '../example';
 
 @Component({
   selector: 'app-backend',
@@ -10,7 +9,7 @@ import { Example } from '../example';
 export class BackendComponent implements OnInit {
 
   constructor(private userService: UsersService) { }
-  exampleObject = new Example();
+  // exampleObject = new Example();
 
   userList : any[];
 
@@ -28,8 +27,8 @@ export class BackendComponent implements OnInit {
   }
 
   handdleClick(){
-    console.log(this.exampleObject);
-    this.userService.insertUser(this.exampleObject);
+    // console.log(this.exampleObject);
+    // this.userService.insertUser(this.exampleObject);
   }
 
 }

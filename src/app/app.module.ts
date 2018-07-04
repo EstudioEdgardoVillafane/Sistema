@@ -60,6 +60,7 @@ import { UserComponent } from './components/back-end/user/user.component';
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
 import { UserService } from './services/back-end/user.service';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { UserService } from './services/back-end/user.service';
     BackEndComponent,
   ],
   imports: [
+  AppRoutingModule,
   BrowserModule,
   FormsModule,
   AngularFireDatabaseModule,
