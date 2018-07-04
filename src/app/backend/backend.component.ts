@@ -9,7 +9,7 @@ import { Example } from '../example';
 })
 export class BackendComponent implements OnInit {
 
-  constructor(private userService : UsersService) { }
+  constructor(private userService: UsersService) { }
   exampleObject = new Example();
 
   userList : any[];

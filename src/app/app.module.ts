@@ -54,14 +54,12 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { BackendComponent } from './backend/backend.component';
-
+import { UserComponent } from './components/back-end/user/user.component';
 //  Services
 
-import { UsserService } from './services/back-end/usser.service';
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
-import { UsserComponent } from './components/back-end/usser/usser.component';
-
+import { UserService } from './services/back-end/user.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +67,6 @@ import { UsserComponent } from './components/back-end/usser/usser.component';
     BackendComponent,
     FrontEndComponent,
     BackEndComponent,
-    UsserComponent,
   ],
   imports: [
   BrowserModule,
@@ -114,7 +111,7 @@ import { UsserComponent } from './components/back-end/usser/usser.component';
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [UsserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
