@@ -12,25 +12,27 @@ import { Example } from '../example';
 export class UsersService {
   
   listUser : AngularFireList<any>;
-  selectUser = new Example;
-  
-  constructor(private fireBase : AngularFireDatabase ) { }
+
+  constructor( private fireBase : AngularFireDatabase ) { }
 
   getUser(){
-    return this.listUser = this.fireBase.list('caca')
+    return this.listUser = this.fireBase.list('sistema')
   }
+  
   insertUser(userObject : Example){    
     this.listUser.push ({
       name: userObject.name,
       password: userObject.password
     });
   }
+
   updateUser(userObject){
     this.listUser.update(userObject.$key,{
       name: "toto",
       password: "nada"
     });
   }
+  
   deleteProduct($key){
     this.listUser.remove($key);
   }
