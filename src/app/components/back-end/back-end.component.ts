@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-back-end',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackEndComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route : ActivatedRoute, private router : Router) { }
 
   ngOnInit() {
   }
 
+  goUsuarios(){
+
+  }
 }

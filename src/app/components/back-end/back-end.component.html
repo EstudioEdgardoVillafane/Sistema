@@ -1,6 +1,5 @@
-<div class="example-container" >
     <mat-toolbar class="example-toolbar">
-      <span class="full-right"><h3>Seca Construcciones</h3></span>
+      <span class="full-right"><h3>Estuedio Edgardo Villafañe</h3></span>
       <button mat-raised-button color="primary" class="ov-y mr-1"
       matBadge="{{Messages}}" matBadgePosition="before" matBadgeColor="accent" routerLink="preguntas">
       <mat-icon>message</mat-icon>
@@ -10,49 +9,24 @@
         <button mat-raised-button color="warn"> Cerrar sessión </button>
       </span>
     </mat-toolbar>
-    <mat-sidenav-container  opened class="example-sidenav-container" style="background-color:transparent!important;">
+    <mat-sidenav-container  opened class="container-sidenav">
   
         <mat-sidenav #snav opened mode="side">
           <mat-nav-list>
             <mat-list dense>
-    
-                <mat-list-item (click)="goUsuarios()">
-                   <mat-icon>perm_identity</mat-icon> <a >Usuarios</a> 
-                </mat-list-item>
-    
-                <mat-list-item (click)="goProductos()">
-                    <mat-icon>style</mat-icon> Productos 
-                  </mat-list-item>
-    
-                <mat-list-item (click)="goSeccion()">
-                  <mat-icon>dashboard</mat-icon> Secciones
-                 </mat-list-item>
-      
-                 <mat-list-item (click)="goAtributo()">
-                   <mat-icon>dashboard</mat-icon> Categorias
-                 </mat-list-item>
-    
-                 <mat-list-item (click)="goSubAtributo()">
-                   <mat-icon>dashboard</mat-icon> Opciones
-                 </mat-list-item>
-  
-                 <mat-list-item (click)="goClientes()">
-                    <mat-icon>tag_faces</mat-icon> Clientes
-                  </mat-list-item>
-  
-                  <mat-list-item (click)="goPreguntas()">
-                      <mat-icon>mail</mat-icon> Preguntas
-                    </mat-list-item>
-                 
+            <mat-list-item (click)="goUsuarios()">
+              <mat-icon>account_circle</mat-icon> <a>Usuarios</a> 
+            </mat-list-item>
+            <mat-list-item (click)="goProyecto()">
+              <mat-icon>assignment</mat-icon> <a>Proyectos</a> 
+            </mat-list-item>
           </mat-list>
           </mat-nav-list>
         </mat-sidenav>
   
-        <mat-sidenav-content>
+        <mat-sidenav-content class="sidenav-content">
           <section class="backend">
-            <!-- <router-outlet></router-outlet> -->
+            <button>Ir a cualquier componente</button>
           </section>
         </mat-sidenav-content>
   </mat-sidenav-container>
-  </div>
-  <button>Ir a cualquier componente</button>

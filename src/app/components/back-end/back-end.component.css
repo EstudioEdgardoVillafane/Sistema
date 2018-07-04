@@ -1,0 +1,15 @@
+.full-right{
+    flex: 1 1 auto;
+}
+.container-sidenav{
+    background-color: transparent;
+    flex: 1;
+}
+
+.backend{
+    min-height: 100vh;
+    background-color:rgb(0, 14, 25);
+    padding-left:50px;
+    padding-right:50px;
+    padding-top: 25px;
+}
