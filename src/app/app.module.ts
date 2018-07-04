@@ -43,7 +43,7 @@ import { MatAutocompleteModule,
   matFormFieldAnimations,
 } from '@angular/material';
 
-//FireBase Configuration
+// FireBase Configuration
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -57,13 +57,19 @@ import { BackendComponent } from './backend/backend.component';
 
 //  Services
 
-import { UsersService } from './services/users.service';
+import { UsserService } from './services/back-end/usser.service';
+import { FrontEndComponent } from './components/front-end/front-end.component';
+import { BackEndComponent } from './components/back-end/back-end.component';
+import { UsserComponent } from './components/back-end/usser/usser.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackendComponent
+    BackendComponent,
+    FrontEndComponent,
+    BackEndComponent,
+    UsserComponent,
   ],
   imports: [
   BrowserModule,
@@ -108,7 +114,7 @@ import { UsersService } from './services/users.service';
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [UsersService],
+  providers: [UsserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
