@@ -60,6 +60,8 @@ import { UserComponent } from './components/back-end/user/user.component';
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
 import { UserService } from './services/back-end/user.service';
+import { StoreComponent } from './components/back-end/user/store/store.component';
+import { UpdateComponent } from './components/back-end/user/update/update.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { UserService } from './services/back-end/user.service';
     BackendComponent,
     FrontEndComponent,
     BackEndComponent,
+    StoreComponent,
+    UpdateComponent,
   ],
   imports: [
   BrowserModule,
