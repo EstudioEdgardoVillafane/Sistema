@@ -63,7 +63,7 @@ import { UsersService } from './services/users.service';
 @NgModule({
   declarations: [
     AppComponent,
-    BackendComponent,
+    BackendComponent
   ],
   imports: [
   BrowserModule,
