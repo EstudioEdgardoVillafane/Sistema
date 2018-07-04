@@ -4,15 +4,17 @@ import { Routes, RouterModule} from '@angular/router';
 
 // Componentes
 import { BackEndComponent } from '../components/back-end/back-end.component';
+import { UserComponent } from '../components/back-end/user/user.component';
+import { HomeComponent } from '../components/back-end/home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' },
-
-  { path: '',
+  { path: '', redirectTo: 'backend', pathMatch: 'full' },
+  { path: 'backend',
   component: BackEndComponent,
   children: [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home', component: BackEndComponent },
+    { path: 'home', component: HomeComponent}    
+    { path: 'usuarios', component: UserComponent}
   ]},
 ];
 

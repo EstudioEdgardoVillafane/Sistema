@@ -11,10 +11,11 @@ export class BackEndComponent implements OnInit {
 
   constructor(private route : ActivatedRoute, private router : Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  
   goUsuarios(){
+    this.router.navigate(['usuarios'], {relativeTo: this.route});
 
   }
 }

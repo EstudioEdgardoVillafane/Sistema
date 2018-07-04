@@ -1,5 +1,5 @@
     <mat-toolbar class="example-toolbar">
-      <span class="full-right"><h3>Estuedio Edgardo Villafañe</h3></span>
+      <span class="full-right"><h3>Estudio Edgardo Villafañe</h3></span>
       <button mat-raised-button color="primary" class="ov-y mr-1"
       matBadge="{{Messages}}" matBadgePosition="before" matBadgeColor="accent" routerLink="preguntas">
       <mat-icon>message</mat-icon>
@@ -26,7 +26,7 @@
   
         <mat-sidenav-content class="sidenav-content">
           <section class="backend">
-            <button>Ir a cualquier componente</button>
+            <router-outlet></router-outlet>
           </section>
         </mat-sidenav-content>
   </mat-sidenav-container>

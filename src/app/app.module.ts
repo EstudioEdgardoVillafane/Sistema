@@ -63,6 +63,7 @@ import { UserService } from './services/back-end/user.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { StoreComponent } from './components/back-end/user/store/store.component';
 import { UpdateComponent } from './components/back-end/user/update/update.component';
+import { HomeComponent } from './components/back-end/home/home.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,8 @@ import { UpdateComponent } from './components/back-end/user/update/update.compon
     BackEndComponent,
     StoreComponent,
     UpdateComponent,
+    UserComponent,
+    HomeComponent
   ],
   imports: [
   AppRoutingModule,
