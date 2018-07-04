@@ -10,7 +10,8 @@ import { Example } from '../example';
 export class BackendComponent implements OnInit {
 
   constructor(private userService : UsersService) { }
-  exampleObject : Example;
+  exampleObject = new Example();
+  
   userList : any[];
 
   ngOnInit() {
