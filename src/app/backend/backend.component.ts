@@ -11,7 +11,7 @@ export class BackendComponent implements OnInit {
 
   constructor(private userService : UsersService) { }
   exampleObject = new Example();
-  
+
   userList : any[];
 
   ngOnInit() {
@@ -25,7 +25,6 @@ export class BackendComponent implements OnInit {
           this.userList.push(x);
         });
       })
-      console.log(this.userList);
   }
 
   handdleClick(){

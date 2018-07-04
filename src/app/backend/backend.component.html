@@ -6,5 +6,6 @@
 </button>
 </form>
 <a *ngFor="let toto of userList">
+  {{toto.$key}}
   {{toto.name}} | {{toto.password}}
 </a>
