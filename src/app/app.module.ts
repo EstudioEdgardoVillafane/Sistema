@@ -65,6 +65,9 @@ import { StoreComponent } from './components/back-end/user/store/store.component
 import { UpdateComponent } from './components/back-end/user/update/update.component';
 import { HomeComponent } from './components/back-end/home/home.component';
 import { ProyectComponent } from './components/back-end/proyect/proyect.component';
+import { StoreProyectComponent } from './components/back-end/proyect/store-proyect/store-proyect.component';
+import { ProyectService } from './services/back-end/proyect.service';
+import { ViewProyectComponent } from './components/back-end/proyect/view-proyect/view-proyect.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +79,9 @@ import { ProyectComponent } from './components/back-end/proyect/proyect.componen
     UpdateComponent,
     UserComponent,
     HomeComponent,
-    ProyectComponent
+    ProyectComponent,
+    StoreProyectComponent,
+    ViewProyectComponent,    
   ],
   imports: [
   AppRoutingModule,
@@ -122,7 +127,9 @@ import { ProyectComponent } from './components/back-end/proyect/proyect.componen
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    ProyectService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

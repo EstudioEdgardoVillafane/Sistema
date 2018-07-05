@@ -7,8 +7,9 @@
 mat-sidenav{
     background-color: black;
 }
+
 mat-list-item{
-    color:white;
+    color:white!important;
 }
 .text-white{
     color:white!important;

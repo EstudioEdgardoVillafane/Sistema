@@ -1,0 +1,10 @@
+mat-card{
+ width: 75%;
+ height: 55%;
+ background: #e5d4ff;
+
+}
+mat-tab-group{
+    background-color: white!important;
+    min-height: 80vh;
+}

@@ -7,6 +7,8 @@ import { BackEndComponent } from '../components/back-end/back-end.component';
 import { UserComponent } from '../components/back-end/user/user.component';
 import { HomeComponent } from '../components/back-end/home/home.component';
 import { ProyectComponent } from '../components/back-end/proyect/proyect.component';
+import { StoreProyectComponent } from '../components/back-end/proyect/store-proyect/store-proyect.component';
+import { ViewProyectComponent } from '../components/back-end/proyect/view-proyect/view-proyect.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'backend', pathMatch: 'full' },
@@ -16,7 +18,9 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'usuarios', component: UserComponent},
-    { path: 'proyecto', component: ProyectComponent}
+    { path: 'proyecto', component: ProyectComponent},
+    { path: 'proyecto/store', component: StoreProyectComponent}
+    { path: 'proyecto/view/:name', component: ViewProyectComponent}
   ]},
 ];
 

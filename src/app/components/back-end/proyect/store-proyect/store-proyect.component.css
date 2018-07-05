@@ -1,0 +1,17 @@
+.container-form,mat-form-field{
+    display:block!important;
+    color:white!important;
+    width: 100%;
+}
+
+#formProyect{
+    background-color: white;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+    color:black!important;
+    padding-bottom:20px;
+    
+}
