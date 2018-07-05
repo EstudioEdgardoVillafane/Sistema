@@ -53,7 +53,6 @@ import { environment } from '../environments/environment';
 //  Componenets
 
 import { AppComponent } from './app.component';
-import { BackendComponent } from './backend/backend.component';
 import { UserComponent } from './components/back-end/user/user.component';
 //  Services
 
@@ -68,11 +67,11 @@ import { ProyectComponent } from './components/back-end/proyect/proyect.componen
 import { StoreProyectComponent } from './components/back-end/proyect/store-proyect/store-proyect.component';
 import { ProyectService } from './services/back-end/proyect.service';
 import { ViewProyectComponent } from './components/back-end/proyect/view-proyect/view-proyect.component';
+import { LoginComponent } from './components/back-end/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackendComponent,
     FrontEndComponent,
     BackEndComponent,
     StoreComponent,
@@ -81,7 +80,8 @@ import { ViewProyectComponent } from './components/back-end/proyect/view-proyect
     HomeComponent,
     ProyectComponent,
     StoreProyectComponent,
-    ViewProyectComponent,    
+    ViewProyectComponent,
+    LoginComponent,    
   ],
   imports: [
   AppRoutingModule,
@@ -129,6 +129,7 @@ import { ViewProyectComponent } from './components/back-end/proyect/view-proyect
   ],
   providers: [
     ProyectService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

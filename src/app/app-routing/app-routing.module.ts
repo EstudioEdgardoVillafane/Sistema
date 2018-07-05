@@ -9,9 +9,11 @@ import { HomeComponent } from '../components/back-end/home/home.component';
 import { ProyectComponent } from '../components/back-end/proyect/proyect.component';
 import { StoreProyectComponent } from '../components/back-end/proyect/store-proyect/store-proyect.component';
 import { ViewProyectComponent } from '../components/back-end/proyect/view-proyect/view-proyect.component';
+import { LoginComponent } from '../components/back-end/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'backend', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'backend',
   component: BackEndComponent,
   children: [
