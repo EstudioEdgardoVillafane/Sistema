@@ -6,6 +6,7 @@ import { Routes, RouterModule} from '@angular/router';
 import { BackEndComponent } from '../components/back-end/back-end.component';
 import { UserComponent } from '../components/back-end/user/user.component';
 import { HomeComponent } from '../components/back-end/home/home.component';
+import { ProyectComponent } from '../components/back-end/proyect/proyect.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'backend', pathMatch: 'full' },
@@ -13,8 +14,9 @@ const routes: Routes = [
   component: BackEndComponent,
   children: [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home', component: HomeComponent}    
-    { path: 'usuarios', component: UserComponent}
+    { path: 'home', component: HomeComponent},
+    { path: 'usuarios', component: UserComponent},
+    { path: 'proyecto', component: ProyectComponent}
   ]},
 ];
 

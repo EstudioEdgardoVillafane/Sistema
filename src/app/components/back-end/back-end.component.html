@@ -1,4 +1,4 @@
-    <mat-toolbar class="example-toolbar">
+    <mat-toolbar>
       <span class="full-right"><h3>Estudio Edgardo Villafañe</h3></span>
       <button mat-raised-button color="primary" class="ov-y mr-1"
       matBadge="{{Messages}}" matBadgePosition="before" matBadgeColor="accent" routerLink="preguntas">
@@ -14,10 +14,13 @@
         <mat-sidenav #snav opened mode="side">
           <mat-nav-list>
             <mat-list dense>
+                <mat-list-item (click)="goHome()">
+                    <mat-icon>home</mat-icon> <a>Home</a> 
+                  </mat-list-item>
             <mat-list-item (click)="goUsuarios()">
               <mat-icon>account_circle</mat-icon> <a>Usuarios</a> 
             </mat-list-item>
-            <mat-list-item (click)="goProyecto()">
+            <mat-list-item (click)="goProyect()">
               <mat-icon>assignment</mat-icon> <a>Proyectos</a> 
             </mat-list-item>
           </mat-list>

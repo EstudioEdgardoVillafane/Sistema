@@ -64,6 +64,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { StoreComponent } from './components/back-end/user/store/store.component';
 import { UpdateComponent } from './components/back-end/user/update/update.component';
 import { HomeComponent } from './components/back-end/home/home.component';
+import { ProyectComponent } from './components/back-end/proyect/proyect.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { HomeComponent } from './components/back-end/home/home.component';
     StoreComponent,
     UpdateComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    ProyectComponent
   ],
   imports: [
   AppRoutingModule,

@@ -16,6 +16,11 @@ export class BackEndComponent implements OnInit {
   
   goUsuarios(){
     this.router.navigate(['usuarios'], {relativeTo: this.route});
-
+  }
+  goHome(){
+    this.router.navigate(['home'], {relativeTo: this.route});
+  }
+  goProyect(){
+    this.router.navigate(['proyecto'], {relativeTo: this.route});
   }
 }
