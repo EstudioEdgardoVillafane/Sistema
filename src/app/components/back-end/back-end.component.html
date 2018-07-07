@@ -1,12 +1,12 @@
     <mat-toolbar>
-      <span class="full-right"><h3>Estudio Edgardo Villafañe</h3></span>
-      <button mat-raised-button color="primary" class="ov-y mr-1"
+      <span class="full-right text-white"><h3>Estudio Edgardo Villafañe</h3></span>
+      <button mat-raised-button color="primary" class="ov-y mr"
       matBadge="{{Messages}}" matBadgePosition="before" matBadgeColor="accent" routerLink="preguntas">
       <mat-icon>message</mat-icon>
         Mensajes
       </button>
       <span>
-        <button mat-raised-button color="warn"> Cerrar sessión </button>
+        <button mat-raised-button color="warn" (click)="handleExitSession()"> Cerrar sessión </button>
       </span>
     </mat-toolbar>
     <mat-sidenav-container  opened class="container-sidenav">

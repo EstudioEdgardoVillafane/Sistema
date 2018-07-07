@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../../services/back-end/user.service';
 import { User } from '../../../../model/user';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -11,7 +14,7 @@ export class StoreComponent implements OnInit {
   objectUser = new User();
   userList: any[];
   position: any[];
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router : Router,private route : ActivatedRoute,  private location: Location) { }
 
   ngOnInit() {
     this.userService.getUser()
@@ -37,10 +40,16 @@ export class StoreComponent implements OnInit {
         });
       })
   }
-
+  passwordValue
+  passwordConfirmValue
   handleSendUser(){
-    this.userService.insertUser(this.objectUser);
+     
+      this.userService.insertUser(this.objectUser);
+      this.location.back();
+    
   }
-
+  handleReturnTable(){
+    this.router.navigate(['usuarios'], {relativeTo: this.route});
+  }
 
 }

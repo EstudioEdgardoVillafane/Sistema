@@ -55,13 +55,12 @@ import { environment } from '../environments/environment';
 //  Componenets
 
 import { AppComponent } from './app.component';
-import { BackendComponent } from './backend/backend.component';
 import { UserComponent } from './components/back-end/user/user.component';
 //  Services
+import { UserService } from './services/back-end/user.service';
 
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
-import { UserService } from './services/back-end/user.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { StoreComponent } from './components/back-end/user/store/store.component';
 import { UpdateComponent } from './components/back-end/user/update/update.component';
@@ -69,11 +68,14 @@ import { HomeComponent } from './components/back-end/home/home.component';
 import { ProyectComponent } from './components/back-end/proyect/proyect.component';
 import { AsignacionComponent } from './components/back-end/asignacion/asignacion.component';
 import { AsignacionStoreComponent } from './components/back-end/asignacion-store/asignacion-store.component';
+import { StoreProyectComponent } from './components/back-end/proyect/store-proyect/store-proyect.component';
+import { ProyectService } from './services/back-end/proyect.service';
+import { ViewProyectComponent } from './components/back-end/proyect/view-proyect/view-proyect.component';
+import { LoginComponent } from './components/back-end/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackendComponent,
     FrontEndComponent,
     BackEndComponent,
     StoreComponent,
@@ -82,7 +84,10 @@ import { AsignacionStoreComponent } from './components/back-end/asignacion-store
     HomeComponent,
     ProyectComponent,
     AsignacionComponent,
-    AsignacionStoreComponent
+    AsignacionStoreComponent,
+    StoreProyectComponent,
+    ViewProyectComponent,
+    LoginComponent 
   ],
   imports: [
   AppRoutingModule,
@@ -128,7 +133,10 @@ import { AsignacionStoreComponent } from './components/back-end/asignacion-store
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    ProyectService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
