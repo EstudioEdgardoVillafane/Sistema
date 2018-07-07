@@ -56,10 +56,10 @@ import { AppComponent } from './app.component';
 import { BackendComponent } from './backend/backend.component';
 import { UserComponent } from './components/back-end/user/user.component';
 //  Services
+import { UserService } from './services/back-end/user.service';
 
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
-import { UserService } from './services/back-end/user.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { StoreComponent } from './components/back-end/user/store/store.component';
 import { UpdateComponent } from './components/back-end/user/update/update.component';
@@ -120,7 +120,9 @@ import { HomeComponent } from './components/back-end/home/home.component';
   MatTreeModule,
   MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
