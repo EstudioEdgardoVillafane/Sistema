@@ -2,60 +2,51 @@
   <form class="example-form">
 
     <mat-form-field class="example-full-width">
-      <input  matInput [(ngModel)]="objectAsignation.name" placeholder="Nombre de asignacion" name="name">
+      <input  matInput [(ngModel)]="objectAsignation.name"
+              placeholder="Nombre de asignacion" name="name">
     </mat-form-field>
-    <!-- [(ngModel)]="objectAsignation.name" -->
-
-
-
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Descripcion" >
-  </mat-form-field>
 
 
 
 
     <mat-form-field>
-      <mat-label>Horas estimadas</mat-label>
-      <mat-select #fontSize [(ngModel)]="objectAsignation.name" value="1 Hora" (selectionChange)="triggerResize()">
-        <mat-option value="1 Hora">1 Hora</mat-option>
-        <mat-option value="2 Horas">2 Horas</mat-option>
-        <mat-option value="3 Horas">3 Horas</mat-option>
-        <mat-option value="4 Horas">4 Horas</mat-option>
-        <mat-option value="5 Horas">5 Horas</mat-option>
-        <mat-option value="6 Horas">6 Horas</mat-option>
-      </mat-select>
-    </mat-form-field>
+        <input [(ngModel)]="objectAsignation.description" matInput placeholder="Descripcion" name="description">
+      </mat-form-field>
 
 
 
-<div>
-  <mat-form-field>
-    <mat-label>Asignador</mat-label>
-    <mat-select #fontSize value="list.name" (selectionChange)="triggerResize()">
-      <mat-option *ngFor="let list of userList" value="list.name">
-        {{list.name}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
 
-  <div>
+      <mat-form-field>
+          <input [(ngModel)]="objectAsignation.hours" matInput placeholder="Horas" name="hours">
+        </mat-form-field>
+
+
+
+
+  <!-- <div>
   <mat-form-field>
     <mat-label>Responsable</mat-label>
-    <mat-select[(ngModel)]="objectAsignation.name"
-                #fontSize value="list.name"
+    <mat-select [(ngModel)]="objectAsignation.responsable"
+                #fontSize
                 (selectionChange)="triggerResize()"
+                name="responsable"
                 >
-      <mat-option *ngFor="let list of userList" value="list.name">
+      <mat-option *ngFor="let list of userList" [value]="list.name">
         {{list.name}}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
-</div>
+</div> -->
 
-
+<mat-form-field>
+    <input  matInput
+            [matDatepicker]="picker" placeholder="fecha de entrega"
+            [(ngModel)]="objectAsignation.date"
+            name="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
 
   <div>
   <mat-form-field class="example-full-width">

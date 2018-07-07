@@ -13,12 +13,18 @@ export class AsignationService {
 
   constructor(private fireBase: AngularFireDatabase) { }
 
-  insertasignation() {
+  insertasignation(Objectasignation: Asgination) {
     this.listAsignation.push ({
-      name: Objectasignation.user,
-      position: Objectasignation.position,
-      password: Objectasignation.password
+      name: Objectasignation.name,
+      desciption: Objectasignation.description,
+      hours: Objectasignation.hours,
+      // assignor: Objectasignation.assignor,
+      // responsable: Objectasignation.responsable,
+      date: Objectasignation.date
     });
   }
 
+  getAsignation() {
+    return this.listAsignation = this.fireBase.list('asignacion');
+  }
 }

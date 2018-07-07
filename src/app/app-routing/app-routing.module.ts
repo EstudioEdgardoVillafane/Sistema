@@ -12,7 +12,7 @@ import { ProyectComponent } from '../components/back-end/proyect/proyect.compone
 import { StoreProyectComponent } from '../components/back-end/proyect/store-proyect/store-proyect.component';
 import { ViewProyectComponent } from '../components/back-end/proyect/view-proyect/view-proyect.component';
 import { LoginComponent } from '../components/back-end/login/login.component';
-
+import { AsignacionStoreComponent } from '../components/back-end/asignacion-store/asignacion-store.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'backend', pathMatch: 'full' },
@@ -22,14 +22,14 @@ const routes: Routes = [
   children: [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
 
-    { path: 'home', component: HomeComponent}, 
+    { path: 'home', component: HomeComponent},
     { path: 'usuarios', component: UserComponent},
     { path: 'usuarios/agregar', component: StoreComponent},
-    { path: 'usuarios/editar' , component: UpdateComponent}
+    { path: 'usuarios/editar' , component: UpdateComponent},
     { path: 'proyecto', component: ProyectComponent},
     { path: 'proyecto/store', component: StoreProyectComponent},
-    { path: 'proyecto/view/:name', component: ViewProyectComponent}
-
+    { path: 'proyecto/view/:name', component: ViewProyectComponent},
+    { path: 'agregarasignacion', component: AsignacionStoreComponent }
   ]},
 ];
 

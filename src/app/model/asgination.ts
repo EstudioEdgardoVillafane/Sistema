@@ -3,6 +3,7 @@ export class Asgination {
   description: string;
   hours: number;
   assignor: string;
+  date: Date;
   responsable: string;
 
 }
