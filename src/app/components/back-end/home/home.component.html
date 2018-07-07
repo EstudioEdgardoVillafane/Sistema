@@ -1,2 +1,28 @@
-<h2 class="text-white title">Hola nameUser, tenes 0 asignaciones nuevas.</h2>
-<h3>Te quedan 0 asignaciones pendientes.</h3>
+<h2 class="title">Hola {{objectUser.user}}, tenes 0 asignaciones nuevas.</h2>
+<hr>
+<mat-grid-list cols="2" rowHeight="300px" class="text-normal mt">
+    <mat-grid-tile>
+      <div class="container-text text-primary">
+        <p>Te quedan 0 asignaciones pendientes.</p>
+        <p>Llevas 0 horas trabajando hoy</p>
+        <p>Llevas 0 horas trabajadas en total</p>
+        <p>Tu cuenta está en $0.00</p>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="box-shadow">
+      <div class="container-text box-white box-home">
+        <p class="title-info">Información de la organización</p>
+        <p>Lider de proyecto: Cristian Hourcade</p>
+        <p>Supervisores: Edgardo Villafane.</p>
+        <p>Cantidad de desarroladores: 2</p>
+      <div class="group-button">
+        <button mat-raised-button color="primary" class="mr"><mat-icon>insert_chart_outlined</mat-icon> Ver Proyectos</button>
+        <button mat-raised-button color="primary" class="mr"><mat-icon>library_books</mat-icon> Ver Asignaciones</button>
+        <button mat-raised-button color="primary"><mat-icon>folder</mat-icon> Ver Repositorios</button>
+      </div>
+      </div>
+     
+    </mat-grid-tile>
+  
+  </mat-grid-list>
+

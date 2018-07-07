@@ -1,0 +1,22 @@
+<form id="formProyect">        
+  <h2>Agregar un nuevo proyecto</h2>
+    <mat-form-field>
+      <input  matInput placeholder="Nombre del proyecto" value="" [(ngModel)]="objectProyect.name"  name="name">
+    </mat-form-field>
+    <mat-form-field>
+        <input  matInput placeholder="Descripcion del proyecto" value="" [(ngModel)]="objectProyect.description" name="description">
+    </mat-form-field>
+    <mat-form-field>
+        <input  matInput placeholder="URL del proyecto" value="" [(ngModel)]="objectProyect.url" name="url">
+    </mat-form-field>
+    <mat-form-field>
+        <input  matInput placeholder="Responsable" value="" [(ngModel)]="objectProyect.responsable" name="responsable">
+    </mat-form-field>
+        
+    <button mat-raised-button color="primary" (click)="handleSendProyect()"><mat-icon>add</mat-icon> Agregar</button>
+</form>
+
+
+    
+
+  

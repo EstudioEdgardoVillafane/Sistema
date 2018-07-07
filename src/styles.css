@@ -4,3 +4,24 @@ body{
     font-family: 'Cuprum', sans-serif;
     margin: 0px!important;
 }
+.pr{
+    padding-right: 15px!important;
+}
+.pl{
+    padding-left: 15px!important;
+}
+.pt{
+    padding-top: 15px!important;
+}
+.pb{
+    padding-bottom: 15px!important;
+}
+.mr{
+    margin-right: 15px!important;
+}
+.ml{
+    margin-left: 15px!important;
+}
+.mt{
+    margin-top: 15px!important;
+}

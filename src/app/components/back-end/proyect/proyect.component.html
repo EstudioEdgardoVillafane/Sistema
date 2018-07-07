@@ -1,0 +1,40 @@
+<h2>Proyectos de E.E.V</h2>
+  
+  <table mat-table [dataSource]="dataSource" class="table-total">
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> <a style="color:blue; cursor:pointer" routerLink="view/{{element.name}}">{{element.name}}</a> </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="url">
+      <th mat-header-cell *matHeaderCellDef> Url </th>
+      <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="responsable">
+      <th mat-header-cell *matHeaderCellDef> Responsable </th>
+      <td mat-cell *matCellDef="let element"> {{element.responsable}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="$key">
+        <th mat-header-cell *matHeaderCellDef> Archivar </th>
+        <td mat-cell *matCellDef="let element">   <button mat-raised-button color="warn" (click)="handleDelete(element.$key)"> Archivar proyecto</button> </td>
+      </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+  <button mat-button routerLink="store"><mat-icon>add</mat-icon> Agregar otro proyecto</button>

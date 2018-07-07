@@ -1,0 +1,36 @@
+<p>Tenes 0 asignaciones pendientes en {{nameProyect}}</p>
+<p> 
+Si te parece que esta información es erronea, por favor comunicate con el responsable del proyecto.
+</p>
+
+<mat-tab-group>
+    <mat-tab label="Asignaciones importantes">
+        <mat-grid-list class="mt" cols="4" rowHeight="2:1">
+            <mat-grid-tile>
+                <mat-card (click)="openDialog()">
+                    <mat-card-title>
+                      {{nameProyect}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                      Toto
+                    </mat-card-subtitle>
+                    </mat-card>
+            </mat-grid-tile>
+            </mat-grid-list>
+    </mat-tab>
+
+    <mat-tab label="Asignaciones pendientes">
+        <mat-grid-list  class="mt" cols="4" rowHeight="2:1">
+            <mat-grid-tile>
+                <mat-card (click)="openDialog()">
+                    <mat-card-title>
+                      {{nameProyect}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                      Toto
+                    </mat-card-subtitle>
+                    </mat-card>
+            </mat-grid-tile>
+            </mat-grid-list>  
+    </mat-tab>
+  </mat-tab-group>
