@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatAutocompleteModule,
+import {
+
+  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
   MatButtonModule,
@@ -65,6 +67,8 @@ import { StoreComponent } from './components/back-end/user/store/store.component
 import { UpdateComponent } from './components/back-end/user/update/update.component';
 import { HomeComponent } from './components/back-end/home/home.component';
 import { ProyectComponent } from './components/back-end/proyect/proyect.component';
+import { AsignacionComponent } from './components/back-end/asignacion/asignacion.component';
+import { AsignacionStoreComponent } from './components/back-end/asignacion-store/asignacion-store.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +80,9 @@ import { ProyectComponent } from './components/back-end/proyect/proyect.componen
     UpdateComponent,
     UserComponent,
     HomeComponent,
-    ProyectComponent
+    ProyectComponent,
+    AsignacionComponent,
+    AsignacionStoreComponent
   ],
   imports: [
   AppRoutingModule,
