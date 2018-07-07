@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatAutocompleteModule,
+import {
+
+  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
   MatButtonModule,
@@ -64,6 +66,8 @@ import { StoreComponent } from './components/back-end/user/store/store.component
 import { UpdateComponent } from './components/back-end/user/update/update.component';
 import { HomeComponent } from './components/back-end/home/home.component';
 import { ProyectComponent } from './components/back-end/proyect/proyect.component';
+import { AsignacionComponent } from './components/back-end/asignacion/asignacion.component';
+import { AsignacionStoreComponent } from './components/back-end/asignacion-store/asignacion-store.component';
 import { StoreProyectComponent } from './components/back-end/proyect/store-proyect/store-proyect.component';
 import { ProyectService } from './services/back-end/proyect.service';
 import { ViewProyectComponent } from './components/back-end/proyect/view-proyect/view-proyect.component';
@@ -79,9 +83,11 @@ import { LoginComponent } from './components/back-end/login/login.component';
     UserComponent,
     HomeComponent,
     ProyectComponent,
+    AsignacionComponent,
+    AsignacionStoreComponent,
     StoreProyectComponent,
     ViewProyectComponent,
-    LoginComponent,    
+    LoginComponent 
   ],
   imports: [
   AppRoutingModule,
