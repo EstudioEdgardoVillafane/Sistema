@@ -1,0 +1,60 @@
+
+  <form class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <input  matInput [(ngModel)]="objectAsignation.name"
+              placeholder="Nombre de asignacion" name="name">
+    </mat-form-field>
+
+
+
+
+    <mat-form-field>
+        <input [(ngModel)]="objectAsignation.description" matInput placeholder="Descripcion" name="description">
+      </mat-form-field>
+
+
+
+
+      <mat-form-field>
+          <input [(ngModel)]="objectAsignation.hours" matInput placeholder="Horas" name="hours">
+        </mat-form-field>
+
+
+
+
+  <!-- <div>
+  <mat-form-field>
+    <mat-label>Responsable</mat-label>
+    <mat-select [(ngModel)]="objectAsignation.responsable"
+                #fontSize
+                (selectionChange)="triggerResize()"
+                name="responsable"
+                >
+      <mat-option *ngFor="let list of userList" [value]="list.name">
+        {{list.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div> -->
+
+<mat-form-field>
+    <input  matInput
+            [matDatepicker]="picker" placeholder="fecha de entrega"
+            [(ngModel)]="objectAsignation.date"
+            name="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Descripcion" >
+  </mat-form-field>
+</div>
+
+<div>
+    <button mat-raised-button color="primary" (click)="handleCreateAsignation()">Crear</button>
+</div>
+</form>

@@ -25,7 +25,7 @@ export class UserService {
 
   insertUser(userObject: User) {
     this.listUser.push ({
-      name: userObject.user,
+      user: userObject.user,
       position: userObject.position,
       password: userObject.password
     });
