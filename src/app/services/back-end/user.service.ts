@@ -4,13 +4,14 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { User } from '../../model/user';
 import { Position } from '../../model/position';
+import { element } from 'protractor';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
   listPosition: AngularFireList<any>;
-  listUser: AngularFireList<any>;
+  listUser : AngularFireList<User>;
 
   constructor( private fireBase: AngularFireDatabase ) { }
 
@@ -19,7 +20,18 @@ export class UserService {
   }
 
   getUser() {
-    return this.listUser = this.fireBase.list('user');
+    let listReturn = [];
+    this.listUser = this.fireBase.list('user');
+    this.listUser
+    .snapshotChanges()
+    .subscribe(item=>{
+      item.forEach(element => {
+        let x = element.payload.toJSON();
+        x["$key"] = element.key;
+        listReturn.push(x as User);
+      });
+    });
+    return listReturn;
   }
 
 
@@ -31,10 +43,11 @@ export class UserService {
     });
   }
 
-  updateUser(userObject) {
+  updateUser(userObject : User) {
     this.listUser.update(userObject.$key, {
       user: userObject.user,
-      password: userObject.password
+      password: userObject.password,
+      position : userObject.position
     });
   }
 

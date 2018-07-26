@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 import { User } from '../../../model/user';
 import {SelectionModel} from '@angular/cdk/collections';
+import { Proyect } from '../../../model/proyect';
 
 
 @Component({
@@ -17,22 +18,25 @@ export class UserComponent implements OnInit {
   displayedColumns: string[] = ['key', 'user', 'position', 'hours'];
   filterUser = new MatTableDataSource(this.userList);
   dataSource = new MatTableDataSource<User>(this.userList);
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  hola;
   
   constructor(private userService : UserService, private router : Router,private route : ActivatedRoute) { }
-  
+
   ngOnInit() {
-    this.userService.getUser()
-    .snapshotChanges()
-    .subscribe(item => {
-      this.userList = [];
-      item.forEach(element => {
-        let x = element.payload.toJSON();
-        x["$key"] = element.key;
-        this.userList.push(x);
-      });
-    })
+    // console.log(this.userService.getUser())
+    this.hola = this.userService.getUser();  // .snapshotChanges()
+    console.log(this.hola);
+    // .subscribe(item => {
+    //   this.userList = [];
+    //   item.forEach(element => {
+    //     let x = element.payload.toJSON();
+    //     x["$key"] = element.key;
+    //     this.userList.push(x);
+    //   });
+    // })
     this.dataSource.paginator = this.paginator;
 
   }
